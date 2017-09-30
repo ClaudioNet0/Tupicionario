@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BichosActivity" />
+        <activity android:name=".CulinariaActivity" />
+        <activity android:name=".PlantasActivity" />
+        <activity android:name=".PovosNativosActivity" />
     </application>
 
 </manifest>
