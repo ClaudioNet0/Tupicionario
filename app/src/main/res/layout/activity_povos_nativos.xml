@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<ListView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -8,4 +8,4 @@
     tools:context="com.example.claudio.tupicionario.PovosNativosActivity"
     android:id="@+id/rootPovosNativos">
 
-</LinearLayout>
+</ListView>

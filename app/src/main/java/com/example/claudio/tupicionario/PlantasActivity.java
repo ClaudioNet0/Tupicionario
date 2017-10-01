@@ -2,7 +2,9 @@ package com.example.claudio.tupicionario;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,12 +20,9 @@ public class PlantasActivity extends AppCompatActivity {
         String[] plantasArray = getResources().getStringArray(R.array.plantas);
         List<String> plantasList = Arrays.asList(plantasArray);
 
-        LinearLayout root = (LinearLayout) findViewById(R.id.rootPlantas);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        ListView listView = (ListView) findViewById(R.id.rootPlantas);
+        listView.setAdapter(adapter);
 
-        for (String planta : plantasList){
-            TextView textView = new TextView(this);
-            textView.setText(planta);
-            root.addView(textView);
-        }
     }
 }

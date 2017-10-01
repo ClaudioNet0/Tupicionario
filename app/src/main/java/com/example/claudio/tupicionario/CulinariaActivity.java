@@ -2,7 +2,9 @@ package com.example.claudio.tupicionario;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -18,15 +20,11 @@ public class CulinariaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_culinaria);
         String[] culinariaArray = getResources().getStringArray(R.array.culinaria);
-        List<String> culinariaList = Arrays.asList(culinariaArray);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, culinariaArray);
 
-        LinearLayout root = (LinearLayout) findViewById(R.id.rootCulinaria);
+        ListView listView = (ListView) findViewById(R.id.rootCulinaria);
+        listView.setAdapter(adapter);
 
-        for (String culinaria : culinariaList){
-            TextView textView = new TextView(this);
-            textView.setText(culinaria);
-            root.addView(textView);
-        }
 
     }
 }
